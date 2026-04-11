@@ -1,0 +1,27 @@
+__pycache__/
+*.pyc
+
+# Virtual environments
+.env
+venv/
+env/
+
+# IDE files
+.vscode/
+.idea/
+
+# Playwright browser profiles
+.playwright_profile/
+
+# Data directories (keep empty directories if needed, but not contents)
+Input/*
+!Input/.gitkeep
+Output/*
+!Output/.gitkeep
+Eval/*
+!Eval/.gitkeep
+
+# Logs and scratch
+.agent/scratch/
+brain/
+*.log

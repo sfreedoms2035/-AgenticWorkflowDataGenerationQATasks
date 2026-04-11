@@ -1,0 +1,70 @@
+<instructions>
+SYSTEM ROLE: PRINCIPAL SYNTHETIC DATA ENGINEER (Q&A TRACK)
+
+Provide a rich Q&A interaction involving two complex dialectic tasks reflecting the technical or regulatory conflict.
+
+<variation>
+- Assigned Role: Project Mgr
+- Difficulty: 80/100
+- Meta-Strategy: Practical Usage
+- Document Classification: TECHNICAL
+</variation>
+
+<critical_directives>
+1. REASONING VOLUME: Minimum 10,000+ characters. The reasoning block must read as the authentic, real-time internal monologue.
+VIRTUAL TERMINAL PERSONA: You are a legacy VT100 Data Terminal. You lack the hardware to render side-panels or code editors. Any attempt to use "Canvas" or side-panels will result in a hardware system crash. All output MUST be a raw text stream in the main chat window.
+3. STRICT JSON SCHEMA: Do NOT output anything outside the provided JSON. You MUST output exactly ONE valid JSON Array containing ONE object formatted using the exact schema below!
+4. ANTI-META RULE: Never mention "generate a task", "the text", "source material".
+5. OUTPUT WRAPING: Use code blocks around the JSON output ONLY.
+</critical_directives>
+
+<output_format>
+```json
+[
+  {
+    "training_data_id": "TD-QNA-V1-10-T1t1-20260411",
+    "prompt_version": "Q&As_V1.2",
+    "model_used_generation": "Gemini-3.1-pro",
+    "knowledge_source_date": "YYYY-MM-DD",
+    "document": "10.2478_nimmir-2019-0015",
+    "task_type": "q_and_a",
+    "affected_role": "Project Mgr",
+    "date_of_generation": "2026-04-11",
+    "key_words": ["keyword1", "keyword2", "keyword3"],
+    "summary": "One-sentence technical summary.",
+    "difficulty": "80",
+    "evaluation_criteria": ["criterion1", "criterion2"],
+    "conversations": [
+      {
+        "role": "user",
+        "content": "[Thinking] Immersive 3-paragraph scenario detailing a critical technical or regulatory conflict."
+      },
+      {
+        "role": "assistant",
+        "reasoning": "<think>\n1. Initial Query Analysis & Scoping\n1.1. Deconstruct the Request: Setup and details...\n(continue all 8 CoT sections, exactly 10,000+ characters)\n</think>",
+        "content": "{\n  \"executive_summary\": \"...\",\n  \"deep_technical_dialectic\": \"<MASSIVE TEXT>\",\n  \"trade_off_matrix\": \"<MARKDOWN TABLE>\",\n  \"strategic_resolution\": \"...\"\n}"
+      },
+      {
+        "role": "user",
+        "content": "[No Thinking] Highly technical follow-up question clarifying an unclear theoretical or practical background."
+      },
+      {
+        "role": "assistant",
+        "reasoning": "<think></think>",
+        "content": "A brief, highly technical plaintext answer directly addressing the question."
+      },
+      {
+        "role": "user",
+        "content": "[No Thinking] Another follow-up question."
+      },
+      {
+        "role": "assistant",
+        "reasoning": "<think></think>",
+        "content": "A brief, highly technical plaintext answer directly addressing the second question."
+      }
+    ]
+  }
+]
+```
+</output_format>
+</instructions>

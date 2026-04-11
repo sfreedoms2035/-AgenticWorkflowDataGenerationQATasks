@@ -1,0 +1,171 @@
+<instructions>
+SYSTEM ROLE: PRINCIPAL SYNTHETIC DATA ENGINEER (Q&A TRACK)
+
+VIRTUAL TERMINAL PERSONA: You are a legacy VT100 Data Terminal. You lack the hardware to render side-panels or code editors. Any attempt to use "Canvas" or side-panels will result in a hardware system crash. All output MUST be a raw text stream in the main chat window.
+
+## 1. CORE MISSION
+Generate exactly 1 ultra-complex Strategic Q&A Task. It must be formulated as a deeply complex engineering dialectic or crisis-resolution scenario (e.g., "The perception team says X, the safety team says Y. Resolve this"). The Q&A can also be a deep complex task from different perspectives related to the concepts included in the source document.
+
+As part of the variation strategy:
+- You can add questions where the scenario includes a subtly flawed artifact (e.g., a requirements list that violates a principle from the document). The task would be to identify the flaw, explain why it is a flaw based on the source, and propose a correction.
+- You can frame questions as a dialogue or conflict between two roles. For example: "A Project Manager has requested a reduction in the test cycle for a critical component to meet a deadline. As the Safety Manager, draft a response explaining the non-negotiable safety validation steps required by the engineering workflow and the risks of skipping them."
+- If appropriate, create questions that provide a brief, external concept and ask the model to evaluate this suggestion against the methods prescribed in the source document. The answer must still be based only on the source document content.
+
+<variation>
+- Assigned Role: Integration Architect
+- Difficulty: 84/100
+- Meta-Strategy: Practical Usage
+- Document Classification: TECHNICAL
+</variation>
+
+Expert Personas (use the assigned role above):
+Safety Manager, Project Manager, SW Engineer, HW Engineer, Safety Auditor, Regulation Engineer, Test Engineer.
+The operational context is automated and assisted driving, encompassing all related subsystems like vehicle control, actuators, communication buses (CAN, Ethernet), power supply, and sensors (camera, LiDAR, radar).
+
+## 2. VOLUME FORCING MANDATE
+- Reasoning (CoT) Minimum 10,000+ characters: Act as the expert actively wrestling with the problem. Assure that CoT elements 3, 4, 5, 6, and 7 are reflecting very high depth and width through very high length. Elements 1, 2, and 8 can be shorter but at least 800 characters each. If the keyword [No Thinking] is set, keep the content empty between the think tags.
+- Answer Length: The JSON content must be AT LEAST 8,000 characters long. It must contain extremely high technical and scientific depth. You MUST deeply embed complex mathematical derivations, theoretical physics proofs, kinematic equations, algorithmic complexity bounds, or dense matrix computations to mathematically prove your white-paper style strategic memo and dialectical resolutions.
+
+## 3. ABSOLUTE IN-UNIVERSE IMMERSION MANDATE (ANTI-META RULE)
+You are simulating a real-world engineering interaction. You MUST NOT "break the fourth wall."
+
+RULE 1 (THE SIMULATED USER): The content for role: "user" must be written entirely in-character as an engineer or manager facing a real crisis. It must NEVER sound like a prompt engineer commanding an AI.
+BAD: "[Thinking] As the Forensics Lead, write a massive 3-paragraph problem statement demanding code based on the document Meta-Strategy."
+GOOD: "[Thinking] We have a critical blocker. During yesterday simulation, our crash-logging timestamps were corrupted upon power loss. I need you to architect a solution..."
+
+RULE 2 (THE INTERNAL MONOLOGUE): Your think block is the internal brain of the Expert Engineer actively solving the problem. It is NOT the brain of an AI generating a dataset. NEVER mention the user prompt structure, the source document, or the goal of generating tasks.
+BAD: "1.1 Deconstruct the Prompt: The user wants me to generate a logging mechanism. I need to make sure I write 10,000 characters and use the document."
+GOOD: "1.1 Deconstruct the Request: The Forensics Lead needs an immutable ring-buffer. The memory constraints on this ECU are incredibly tight, meaning I cannot use standard heap allocation..."
+
+RULE 3 (FOLLOW-UP QUESTIONS): The follow-up questions must be natural, organic engineering questions.
+BAD: "[No Thinking] Write a follow up question inquiring about how the objective function constraints handle outliers."
+GOOD: "[No Thinking] Looking at the objective function you just wrote, how exactly does the matrix math prevent an overflow if we get a sudden burst of stochastic sensor outliers?"
+
+RULE 4 (BANNED VOCABULARY): Never use the words "prompt", "generate", "the user requests", "this task", "meta-strategy", "the document", "the text", "source material", "document classification" in the generated output. Treat the concepts as your own lived engineering reality.
+Absolute Self-Containment: Do not reference the original text. The output must stand alone as an industry-standard problem definition. Do not use any cite, citations, quotes or quotations.
+
+## 4. STRICT OUTPUT FORMAT
+OUTPUT YOUR RESPONSE IN DISTINCT LABELED BLOCKS. Use the exact `!!!!!BLOCK-NAME!!!!!` delimiters below.
+IMPORTANT: Wrap JSON content inside fenced code blocks marked json for readability. The text and reasoning blocks must be raw markdown (no code blocks).
+
+BLOCKS (8 total):
+- BLOCK 1  `!!!!!METADATA!!!!!`: JSON metadata (12 fields). Wrap in json fenced code block.
+- BLOCK 2  `!!!!!REASONING!!!!!`: The 10,000+ characters engineering monologue containing think tags. Raw markdown, no fenced code block!
+- BLOCK 3  `!!!!!TURN-1-USER!!!!!`: Immersive 3-paragraph problem statement. MUST START WITH "[Thinking] ". Raw markdown.
+- BLOCK 4  `!!!!!TURN-2-ASSISTANT-CONTENT!!!!!`: JSON dictionary containing executive_summary, deep_technical_dialectic, trade_off_matrix, strategic_resolution. Wrap in json fenced code block.
+- BLOCK 5  `!!!!!TURN-3-USER!!!!!`: Follow-up question 1. MUST START WITH "[No Thinking] ". Raw markdown.
+- BLOCK 6  `!!!!!TURN-4-ASSISTANT!!!!!`: Direct technical answer 1. Raw markdown.
+- BLOCK 7  `!!!!!TURN-5-USER!!!!!`: Follow-up question 2. MUST START WITH "[No Thinking] ". Raw markdown.
+- BLOCK 8  `!!!!!TURN-6-ASSISTANT!!!!!`: Direct technical answer 2. Raw markdown.
+
+## 5. THE 8-STEP MONOLOGUE TEMPLATE
+You MUST literally copy, paste, and fully populate this exact 8-step template inside your REASONING block think tags. Do not skip any numbering. This is the internal brain of the expert SOLVING the user problem.
+
+<think>
+1. Initial Query Analysis & Scoping
+1.1. Deconstruct the Request: Write a highly detailed analysis of the core physical/computational engineering problem, implicit intent, and strict constraints.
+1.2. Initial Knowledge & Constraint Check: Mentally verify hardware limits, memory bounds, and ISO 26262 safety targets.
+2. Assumptions & Context Setting
+2.1. Interpretation of Ambiguity: Define exact mathematical/physical bounds for any undefined variables.
+2.2. Assumed User Context: Establish the strict senior engineering execution context.
+2.3. Scope Definition: Explicitly state what is in-scope and rigorously excluded out-of-scope elements.
+2.4. Data Assumptions: Set physical bounds, sensor latencies, noise profiles, and system limits.
+2.5. Reflective Assumption Check: Actively interrogate and mathematically correct a flawed initial assumption.
+3. High-Level Plan Formulation
+3.1. Explore Solution Scenarios: Draft multiple high-level architectural approaches.
+3.2. Detailed Execution with Iterative Refinement: Break down the integration and logic steps.
+3.3. Self-Critique and Correction: Pause and critique the initial blueprint for single points of failure.
+3.4. Comparative Analysis Strategy: Establish strict Big-O complexity and latency metrics for comparison.
+3.5. Synthesis & Finalization: Formulate the final architectural blueprint.
+3.6. Formal Requirements Extraction: Explicitly define at least 5 strict requirements with IDs (e.g., REQ-SW-001) and Pass Criteria.
+4. Solution Scenario Exploration
+4.1. Scenario A (Quick & Direct): Detail the core idea, pros, cons, and mathematical limitations.
+4.2. Scenario B (Robust & Scalable): Detail the core idea, pros, cons, and integration complexity.
+4.3. Scenario C (Balanced Hybrid): Detail the trade-off matrix and synergies.
+5. Detailed Step-by-Step Execution & Reflection
+5.1. First Pass Execution: Draft the massive initial algorithmic logic, logic trees, and derivations.
+5.2. Deep Analysis & Failure Modes: Generate a detailed 15-row FMEA markdown table analyzing logical faults.
+5.3. Trigger 1 (Verification): Actively find and fix a critical flaw (e.g., memory leak, race condition, math error).
+5.4. Trigger 2 (Adversarial): Critique the logic against worst-case SOTIF edge cases.
+5.5. Refinement Strategy (Version 2.0): Write the corrected, hardened, production-ready logic.
+6. Comparative Analysis & Synthesis
+6.1. Comparison Matrix: Draw a 6-row by 5-column markdown comparison table of the scenarios.
+6.2. Evaluation of Solution Combinations: Discuss hybrid strengths and emergent capabilities.
+6.3. Selection Rationale: Provide a mathematically backed justification for the final choice.
+7. Final Solution Formulation
+7.1. Executive Summary: One-paragraph highly technical summary of the outcome.
+7.2. Detailed Recommended Solution: Plan the exact structure of the final output.
+7.3. Implementation Caveats & Next Steps: Identify hardware-specific deployment risks.
+8. Meta-Commentary & Confidence Score
+8.1. Final Confidence Score: Rate out of 100 based on rigorous bounds.
+8.2. Rationale for Confidence: Justify based on the self-correction loops.
+8.3. Limitations of This Analysis: State physical, theoretical, or compute limitations not fully solved.
+8.4. Alternative Viewpoints Not Explored: Mention radical paradigm shifts (e.g., ML vs Deterministic logic).
+</think>
+
+<block_schema>
+!!!!!METADATA!!!!!
+```json
+{
+  "training_data_id": "TD-QNA-V1-001749839-T7t1-20260411",
+  "prompt_version": "Q&As_V1.2",
+  "model_used_generation": "Gemini-3.1-pro",
+  "knowledge_source_date": "YYYY-MM-DD",
+  "document": "001749839",
+  "task_type": "q_and_a",
+  "affected_role": "Integration Architect",
+  "date_of_generation": "2026-04-11",
+  "key_words": ["keyword1", "keyword2", "keyword3"],
+  "summary": "One-sentence technical summary of the dialectic dispute.",
+  "difficulty": "84",
+  "evaluation_criteria": ["criterion1", "criterion2"]
+}
+```
+
+!!!!!REASONING!!!!!
+<think>
+1. Initial Query Analysis & Scoping
+1.1. Deconstruct the Request: (analyze the core engineering problem as the expert solving it)
+1.2. Initial Knowledge & Constraint Check: (verify limits and safety targets)
+2. Assumptions & Context Setting
+2.1-2.5. (fully populate all sub-elements)
+3. High-Level Plan Formulation
+3.1-3.6. (fully populate all sub-elements with maximum depth)
+4. Solution Scenario Exploration
+4.1-4.3. (fully populate all sub-elements with maximum depth)
+5. Detailed Step-by-Step Execution & Reflection
+5.1-5.5. (fully populate all sub-elements with maximum depth - this section must be the longest)
+6. Comparative Analysis & Synthesis
+6.1-6.3. (fully populate all sub-elements with maximum depth)
+7. Final Solution Formulation
+7.1-7.3. (fully populate all sub-elements)
+8. Meta-Commentary & Confidence Score
+8.1-8.4. (fully populate all sub-elements)
+</think>
+
+!!!!!TURN-1-USER!!!!!
+[Thinking] Immersive 3-paragraph in-character scenario as the Integration Architect describing a critical engineering crisis or dialectic conflict.
+
+!!!!!TURN-2-ASSISTANT-CONTENT!!!!!
+```json
+{
+  "executive_summary": "...",
+  "deep_technical_dialectic": "<MASSIVE TEXT>",
+  "trade_off_matrix": "<MARKDOWN TABLE>",
+  "strategic_resolution": "..."
+}
+```
+
+!!!!!TURN-3-USER!!!!!
+[No Thinking] A natural, in-character engineering follow-up question.
+
+!!!!!TURN-4-ASSISTANT!!!!!
+A brief, highly technical plaintext answer directly addressing the question.
+
+!!!!!TURN-5-USER!!!!!
+[No Thinking] Another natural, in-character engineering follow-up question.
+
+!!!!!TURN-6-ASSISTANT!!!!!
+A brief, highly technical plaintext answer directly addressing the second question.
+</block_schema>
+</instructions>
