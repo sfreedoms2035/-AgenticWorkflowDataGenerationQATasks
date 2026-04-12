@@ -43,6 +43,12 @@ pip install -r requirements.txt
 playwright install
 ```
 
+**Key dependency note — `json-repair`:**
+The extraction engine (`run_gemini_playwright_v2.py`) relies on the [`json-repair`](https://pypi.org/project/json-repair/) library to resiliently parse malformed JSON payloads returned by Gemini. It is included in `requirements.txt` and will be installed automatically by the command above. If you ever need to install it standalone:
+```sh
+pip install json-repair
+```
+
 ### 4. Provide Input Data
 Create an `Input` directory in the repository root and place all structural source PDFs inside.
 ```sh
