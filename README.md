@@ -82,3 +82,19 @@ python pipeline.py --pdf "name_of_document.pdf"
 
 ## Track & Outputs
 Outputs will be aggregated in the `/Output/json/` directory containing complete 6-turn structured JSON representations. System progression is captured iteratively inside `Output/progress.json`.
+
+
+### Terms Mode and Deep Think Mode
+
+**To use Terms Mode (generates tasks based on autonomous driving terms instead of PDFs):**
+Place your terms list in `Input_terms/Terms.md`.
+```bash
+python pipeline.py --terms-mode
+```
+
+**To enable the Deep Think model (e.g., Gemini 2.0 Flash Thinking / Gemini Thinking):**
+Can be combined with any mode to enable advanced reasoning capabilities.
+```bash
+python pipeline.py --deep-think
+python pipeline.py --terms-mode --deep-think
+```
