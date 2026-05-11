@@ -1,3 +1,14 @@
+Your previous response FAILED quality validation.
+CRITICAL: You MUST regenerate the response using the FULL 8-BLOCK SCHEMA (!!!!!METADATA!!!!! through !!!!!TURN-6-ASSISTANT!!!!!).
+Do NOT omit any blocks. Even if you are fixing a specific issue, the entire structured output must be provided.
+
+You MUST fix the following specific issues while maintaining ALL original constraints:
+
+- VOLUME FAILURE: CoT too short: 8389 chars (min 9000). Expand your content significantly to meet the character/line limits.
+
+--- ORIGINAL TASK INSTRUCTIONS ---
+Review the original instructions below and ensure your new output satisfies BOTH the original rules AND fixes the failures listed above.
+----------------------------------------
 <instructions>
 SYSTEM ROLE: PRINCIPAL SYNTHETIC DATA ENGINEER (Q&A TRACK)
 
@@ -12,9 +23,9 @@ As part of the variation strategy:
 - If appropriate, create questions that provide a brief, external concept and ask the model to evaluate this suggestion against the methods prescribed in the source document. The answer must still be based only on the source document content.
 
 <variation>
-- Assigned Role: Project Mgr
-- Difficulty: 80/100
-- Meta-Strategy: Practical Usage
+- Assigned Role: Safety Manager
+- Difficulty: 95/100
+- Meta-Strategy: Theoretical Background
 - Document Classification: TECHNICAL
 </variation>
 
@@ -107,17 +118,17 @@ You MUST literally copy, paste, and fully populate this exact 8-step template in
 !!!!!METADATA!!!!!
 ```json
 {
-  "training_data_id": "TD-QNA-V1-10-T1t1-20260411",
+  "training_data_id": "TD-QNA-V1-1127579900-MIT-T3t2-20260414",
   "prompt_version": "Q&As_V1.2",
   "model_used_generation": "Gemini-3.1-pro",
   "knowledge_source_date": "YYYY-MM-DD",
-  "document": "10.2478_nimmir-2019-0015",
+  "document": "1127579900-MIT",
   "task_type": "q_and_a",
-  "affected_role": "Project Mgr",
-  "date_of_generation": "2026-04-11",
+  "affected_role": "Safety Manager",
+  "date_of_generation": "2026-04-14",
   "key_words": ["keyword1", "keyword2", "keyword3"],
   "summary": "One-sentence technical summary of the dialectic dispute.",
-  "difficulty": "80",
+  "difficulty": "95",
   "evaluation_criteria": ["criterion1", "criterion2"]
 }
 ```
@@ -144,7 +155,7 @@ You MUST literally copy, paste, and fully populate this exact 8-step template in
 </think>
 
 !!!!!TURN-1-USER!!!!!
-[Thinking] Immersive 3-paragraph in-character scenario as the Project Mgr describing a critical engineering crisis or dialectic conflict.
+[Thinking] Immersive 3-paragraph in-character scenario as the Safety Manager describing a critical engineering crisis or dialectic conflict.
 
 !!!!!TURN-2-ASSISTANT-CONTENT!!!!!
 ```json

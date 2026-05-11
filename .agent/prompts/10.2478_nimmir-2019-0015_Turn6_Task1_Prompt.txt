@@ -12,9 +12,9 @@ As part of the variation strategy:
 - If appropriate, create questions that provide a brief, external concept and ask the model to evaluate this suggestion against the methods prescribed in the source document. The answer must still be based only on the source document content.
 
 <variation>
-- Assigned Role: Project Mgr
-- Difficulty: 80/100
-- Meta-Strategy: Practical Usage
+- Assigned Role: SOTIF Expert
+- Difficulty: 92/100
+- Meta-Strategy: Further Improvement
 - Document Classification: TECHNICAL
 </variation>
 
@@ -107,17 +107,17 @@ You MUST literally copy, paste, and fully populate this exact 8-step template in
 !!!!!METADATA!!!!!
 ```json
 {
-  "training_data_id": "TD-QNA-V1-10-T1t1-20260411",
+  "training_data_id": "TD-QNA-V1-10-T6t1-20260412",
   "prompt_version": "Q&As_V1.2",
   "model_used_generation": "Gemini-3.1-pro",
   "knowledge_source_date": "YYYY-MM-DD",
   "document": "10.2478_nimmir-2019-0015",
   "task_type": "q_and_a",
-  "affected_role": "Project Mgr",
-  "date_of_generation": "2026-04-11",
+  "affected_role": "SOTIF Expert",
+  "date_of_generation": "2026-04-12",
   "key_words": ["keyword1", "keyword2", "keyword3"],
   "summary": "One-sentence technical summary of the dialectic dispute.",
-  "difficulty": "80",
+  "difficulty": "92",
   "evaluation_criteria": ["criterion1", "criterion2"]
 }
 ```
@@ -144,7 +144,7 @@ You MUST literally copy, paste, and fully populate this exact 8-step template in
 </think>
 
 !!!!!TURN-1-USER!!!!!
-[Thinking] Immersive 3-paragraph in-character scenario as the Project Mgr describing a critical engineering crisis or dialectic conflict.
+[Thinking] Immersive 3-paragraph in-character scenario as the SOTIF Expert describing a critical engineering crisis or dialectic conflict.
 
 !!!!!TURN-2-ASSISTANT-CONTENT!!!!!
 ```json
